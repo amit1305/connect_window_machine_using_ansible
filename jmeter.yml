@@ -1,0 +1,24 @@
+---
+
+- name: Ansible Copy Example Local to Remote
+  hosts: windows
+  serial: 15
+  gather_facts: False
+  tasks:
+    #- name: Create Development folder
+     # win_file:
+      #  path:  c:\Users\Administrator\Downloads\apache-jmeter-5.0\apache-jmeter-5.0\bin\Development
+       # state: directory
+    
+    #- name: Go to the folder and check bat file
+     # win_path:
+      #  elements: c:\Users\Administrator\Downloads\apache-jmeter-5.0\apache-jmeter-5.0\bin\jmeter-server.bat
+       # state: present
+
+    - name: Execute script
+      win_command: C:\Users\Administrator\Downloads\apache-jmeter-5.0\apache-jmeter-5.0\bin\jmeter-server.bat
+      register: out
+
+    #- name: print
+     # debug:
+      #  msg: '{{ out.stdout}}'
