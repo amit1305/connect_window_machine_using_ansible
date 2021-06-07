@@ -21,3 +21,15 @@ To view the current listeners and ports that are running on the WinRM service, r
 winrm enumerate winrm/config/Listener
 
 Also, open the WINRM ports on your cloud like 5985/5986. 
+
+
+On Linux Machine:::
+Install python above 2.7
+Install ansible
+Install pywinrm using python pip package.
+
+After this go to /etc/ansible folder and update all ansible.cfg, Hosts and create playbook using yml file as given files.
+
+
+
+
